@@ -1,0 +1,275 @@
+@import 'https://fonts.googleapis.com/css?family=Space+Mono:400,700';
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  @font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+/* Nav Bar */ 
+
+a {
+  color: #1425ca;
+  font-family: 'Space Mono', sans-serif; 
+  transition: all .25s ease;
+  padding: 10px;
+}
+
+a:hover {
+  font-family: 'Space Mono', sans-serif; 
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.nav-link {
+  font-family: 'Space Mono', sans-serif; 
+  color: white;
+}
+
+.nav-link:hover {
+  font-family: 'Space Mono', sans-serif; 
+  color: #1425ca;
+}
+.main-nav .header-top-socials a {
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 20px 6px;
+}
+
+.navbar-nav .nav-link {
+  padding: 20px 15px !important;
+  font-size: 20px;
+}
+
+.navbar-nav>.active> a, 
+.navbar-nav>.active> a:focus, 
+.navbar-nav>.active> a:hover {
+  color: #1425ca; /* Anything you want */
+}
+
+/* Background */
+
+body {
+    background-color: black;
+   
+}
+
+/* Typography */ 
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+
+  font-family: 'Space Mono', sans-serif; 
+  color: white;
+}
+
+h1, .h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  line-height: 52px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h6, .h6 {
+  font-size: 14px;
+}
+
+p {
+  color: white;
+  font-family: "Heebo", sans-serif;
+}
+
+
+  /* PLAY - Neon */
+
+  /*
+  
+  .sign {
+    font-family: "Clip";
+    color: white;
+    font-size: 5em;
+    text-shadow: 0 0 0.6rem #1425ca, 0 0 1.5rem #1425ca, -0.2rem 0.1rem 1rem #1425ca, 0.2rem 0.1rem 1rem #1425ca, 0 -0.5rem 2rem #1425ca, 0 0.5rem 3rem #1425ca;
+    animation: rotate 5s 2s ease-in-out alternate;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }*/
+  
+  /* PLAYING - NEON FLASHING*/
+
+
+.neon {
+    font-family: neon;
+    color: #FB4264;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-shadow: 0 0 3vw #F40A35;
+  }
+  
+  .flux {
+    font-family: neon;
+    color: #426DFB;
+    font-size: 5rem;
+    line-height: 5rem;
+    text-shadow: 0 0 3vw #2356FF;
+  }
+  
+  .neon {
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+  }
+  
+  @keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+      color: #806914;
+    }
+  }
+  
+  .flux {
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+  }
+  
+  @keyframes flux {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: #28D7FE;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #146C80;
+    }
+  }
+  
+  /* Gallery */
+
+  .gallery { 
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.gallery img { 
+    width: 100%; 
+    height: auto;
+    transition: 50ms;
+    margin-bottom: 10px;
+    opacity: 1;
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+}
+
+.gallery img:hover {
+    opacity: 0.7;
+}
+
+/* .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+} */
+
+.modal-img,.model-vid{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: table
+}
+.modal-body{
+  padding: 0px;
+}
+
+.modal-dialog {
+    height: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+  border: none;
+} */
+
+@media screen and (max-width: 767px) {
+	.gallery { 
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+	.gallery div { margin: 0; 
+        width: 200px;
+    }
+  .modal-dialog {
+        margin: 0 8vw;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .gallery { 
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .gallery div { 
+        margin: 0; 
+        width: 200px;
+    }
+}
+
+/* Loading */
+  
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    margin: auto;
+    font-size: 50px;
+  }

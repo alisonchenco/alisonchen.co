@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+@import 'https://fonts.googleapis.com/css?family=Space+Mono:400,700';
+
+
+
+a {
+  color: #1425ca;
+  font-family: 'Space Mono', sans-serif; 
+  transition: all .25s ease;
+  padding: 10px;
+}
+
+a:hover {
+  font-family: 'Space Mono', sans-serif; 
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+
+.nav-link {
+  font-family: 'Space Mono', sans-serif; 
+  color: #000;
+}
+
+.nav-link:hover {
+  font-family: 'Space Mono', sans-serif; 
+  color: #1425ca;
+}
+.main-nav .header-top-socials a {
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 20px 6px;
+}
+
+.navbar-nav .nav-link {
+  padding: 20px 15px !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+}
+
+.navbar-nav>.active> a, 
+.navbar-nav>.active> a:focus, 
+.navbar-nav>.active> a:hover {
+  color: #1425ca; /* Anything you want */
+}
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /*background: black;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign {
+  font-family: "Clip";
+  color: #1425ca;
+  font-size: 5em;
+  text-shadow: 0 0 0.6rem #1425ca, 0 0 1.5rem #1425ca, -0.2rem 0.1rem 1rem #1425ca, 0.2rem 0.1rem 1rem #1425ca, 0 -0.5rem 2rem #1425ca, 0 0.5rem 3rem #1425ca;
+  animation: rotate 5s 2s ease-in-out alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Words-effect {
+  color: #0000ff;
+}
+
+
+
+body {
+  background: #F2F2F2;
+}
+
+#c {
+  display: block;
+  margin: 20px auto 0;
+}
+
+.center {
+text-align: center;
+}
+
+#close {
+  float: right;
+  margin: 10px;
+}
