@@ -1,50 +1,14 @@
 @import 'https://fonts.googleapis.com/css?family=Space+Mono:400,700';
-
+/*@font-face { font-family: Aeonik; src: url('Aeonik-Medium.otf'); } 
+@font-face { font-family: Aeonik; font-weight: bold; src: url('Aeonik-Black.otf');}
+@font-face { font-family: Aeonik; font-weight: 200; src: url('Aeonik-Light.otf');}*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');*/
 /* Nav Bar */ 
 
-.nav {
-  display: block;
-}
 
-a {
-  color: #1425ca;
-  font-family: 'Space Mono', sans-serif; 
-  transition: all .25s ease;
-  padding: 10px;
-}
 
-a:hover {
-  font-family: 'Space Mono', sans-serif; 
-  color: #000;
-  text-decoration: none;
-  outline: none;
-}
-
-.nav-link {
-  font-family: 'Space Mono', sans-serif; 
-  color: #000;
-}
-
-.nav-link:hover {
-  font-family: 'Space Mono', sans-serif; 
-  color: #1425ca;
-}
-.main-nav .header-top-socials a {
-  letter-spacing: 1px;
-  font-size: 14px;
-  padding: 20px 6px;
-}
-
-.navbar-nav .nav-link {
-  padding: 20px 15px !important;
-  font-size: 20px;
-}
-
-.navbar-nav>.active> a, 
-.navbar-nav>.active> a:focus, 
-.navbar-nav>.active> a:hover {
-  color: #1425ca; /* Anything you want */
-}
 
 /* Typography */ 
 
@@ -65,19 +29,21 @@ a:hover {
   color: #2D37D5;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: 'Space Mono', sans-serif; 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   color: #292828;
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: 0.03em;
 }
 
 h1, .h1 {
-  font-size: 40px;
+  font-size: 50px;
   line-height: 60px;
 }
 
 h2, .h2 {
   font-size: 30px;
-  line-height: 52px;
+  line-height: 40px;
+  font-weight: 400;
 }
 
 h3, .h3 {
@@ -102,7 +68,55 @@ h6, .h6 {
 }
 
 p {
-  /*font-family: "Heebo", sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Archivo', sans-serif;
+}
+
+
+
+.nav {
+  display: block;
+}
+
+a {
+  color: #222222;
+  font-family: 'Archivo', sans-serif; 
+  transition: all .25s ease;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+a:hover {
+  font-family: 'Archivo', sans-serif; 
+  color: #000;
+  text-decoration: wavy;
+  outline: none;
+}
+
+.nav-link {
+  font-family: 'Archivo', sans-serif; 
+  color: #000;
+}
+
+.nav-link:hover {
+  font-family: 'Archivo', sans-serif; 
+  color: #222222;
+}
+.main-nav .header-top-socials a {
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 20px 6px;
+}
+
+.navbar-nav .nav-link {
+  padding: 20px 15px !important;
+  font-size: 20px;
+}
+
+.navbar-nav>.active> a, 
+.navbar-nav>.active> a:focus, 
+.navbar-nav>.active> a:hover {
+  color: #222222; /* Anything you want */
 }
 
 
@@ -161,18 +175,27 @@ p {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
+    margin: 1rem 1.5rem 1rem 0;
+    -webkit-box-flex: 0;
+            flex: 0 0 500px;
+  }
+  .hs-project {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
     margin: 1rem 1.5rem 1rem 0;
     -webkit-box-flex: 0;
             flex: 0 0 500px;
   }
   @media (min-width: 600px) {
     .hs {
-      max-width: 500px;
+      /*max-width: 500px;*/
     }
   }
   .hs__img {
     height: auto;
+    max-width: 500px;
     overflow: hidden;
   }
   @media (min-width: 600px) {
@@ -219,4 +242,106 @@ p {
 
 .zoom:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/*cube*/
+
+.edit {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #000000;
+  color: white;
+}
+
+.cube, .face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(30deg);
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(-30deg) rotateY(-150deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(210deg);
+  }
+}
+.face {
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  margin: -.5em 0 0 -.5em;
+  border: 2px solid;
+  transform-style: preserve-3d;
+}
+.face::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: mask 6s linear infinite;
+}
+.face:nth-child(1) {
+  transform: translateZ(0.5em);
+}
+.face:nth-child(2) {
+  transform: rotateY(-90deg) translateZ(0.5em);
+}
+.face:nth-child(3) {
+  transform: rotateX(90deg) translateZ(0.5em);
+}
+.face:nth-child(4) {
+  transform: rotateY(180deg) translateZ(0.5em);
+}
+.face:nth-child(5) {
+  transform: rotateY(90deg) translateZ(0.5em);
+}
+.face:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(0.5em);
+}
+.face:nth-child(1)::before {
+  background-image: linear-gradient(to top, currentColor, currentColor), linear-gradient(to top, currentColor, currentColor), linear-gradient(to top right, rgba(0, 0, 0, 0) calc(50% - 1.5px), currentColor calc(50% - 1px), currentColor calc(50% + 1px), rgba(0, 0, 0, 0) calc(50% + 1.5px)), linear-gradient(to top, #2c3e50, #2c3e50);
+  background-size: 2px 0.33333em, 0.42265em 2px, 0.57735em 0.66667em, calc(1em - 4px) calc(1em - 4px);
+  background-position: calc(0.42265em - 1px) 0, 0 calc(.3333333em - 1px), bottom right, center;
+}
+.face:nth-child(2)::before {
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0) calc(50% - 1.5px), currentColor calc(50% - 1px), currentColor calc(50% + 1px), rgba(0, 0, 0, 0) calc(50% + 1.5px)), linear-gradient(to top, #2c3e50, #2c3e50);
+  background-size: 100% 0.66667em, calc(1em - 4px) calc(1em - 4px);
+  background-position: bottom right, center;
+}
+.face:nth-child(3)::before {
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0) calc(50% - 1.5px), currentColor calc(50% - 1px), currentColor calc(50% + 1px), rgba(0, 0, 0, 0) calc(50% + 1.5px)), linear-gradient(to top, #2c3e50, #2c3e50);
+  background-size: 0.57735em 100%, calc(1em - 4px) calc(1em - 4px);
+  background-position: bottom right, center;
+  animation: mask 6s linear infinite, topPosition 6s ease-in-out infinite;
+}
+
+@keyframes mask {
+  from, 50% {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes topPosition {
+  from, 50% {
+    background-position: bottom right, center;
+  }
+  to {
+    background-position: bottom left, center;
+  }
 }

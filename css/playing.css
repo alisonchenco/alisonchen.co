@@ -7,29 +7,30 @@
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
   }
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
 /* Nav Bar */ 
 
 a {
   color: #1425ca;
-  font-family: 'Space Mono', sans-serif; 
+  font-family: 'Archivo', sans-serif; 
   transition: all .25s ease;
   padding: 10px;
 }
 
 a:hover {
-  font-family: 'Space Mono', sans-serif; 
+  font-family: 'Archivo', sans-serif; 
   color: white;
   text-decoration: none;
   outline: none;
 }
 
 .nav-link {
-  font-family: 'Space Mono', sans-serif; 
+  font-family: 'Archivo', sans-serif; 
   color: white;
 }
 
 .nav-link:hover {
-  font-family: 'Space Mono', sans-serif; 
+  font-family: 'Archivo', sans-serif; 
   color: #1425ca;
 }
 .main-nav .header-top-socials a {
@@ -58,10 +59,11 @@ body {
 
 /* Typography */ 
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
 
-  font-family: 'Space Mono', sans-serif; 
+  font-family: 'Archivo', sans-serif; 
   color: white;
+  letter-spacing: 0.03em;
 }
 
 h1, .h1 {
