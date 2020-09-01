@@ -255,6 +255,17 @@ a:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.shrink {
+  transition: transform .2s; /* Animation */
+}
+
+.shrink:hover
+{
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
 
 /*cube*/
 
