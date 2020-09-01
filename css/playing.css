@@ -1,37 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
 @import 'https://fonts.googleapis.com/css?family=Space+Mono:400,700';
 @font-face {
-    font-family: Clip;
-    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
-  }
-  @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
+}
+/*@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }*/
+
 /* Nav Bar */ 
 
+.nav {
+  display: block;
+}
+
 a {
-  color: #1425ca;
-  font-family: 'Archivo', sans-serif; 
+  color: #2D37D5;
+  font-family: 'Work Sans', sans-serif; 
   transition: all .25s ease;
+  text-decoration: none;
   padding: 10px;
 }
 
 a:hover {
-  font-family: 'Archivo', sans-serif; 
-  color: white;
-  text-decoration: none;
+  font-family: 'Work Sans', sans-serif; 
+  color: #ffffff;
+  text-decoration: underline;
   outline: none;
 }
 
 .nav-link {
-  font-family: 'Archivo', sans-serif; 
-  color: white;
+  font-family: 'Work Sans', sans-serif; 
+  color: #ffffff;
 }
 
 .nav-link:hover {
-  font-family: 'Archivo', sans-serif; 
-  color: #1425ca;
+  font-family: 'Work Sans', sans-serif; 
+  color: #ffffff;
 }
 .main-nav .header-top-socials a {
   letter-spacing: 1px;
@@ -47,8 +53,9 @@ a:hover {
 .navbar-nav>.active> a, 
 .navbar-nav>.active> a:focus, 
 .navbar-nav>.active> a:hover {
-  color: #1425ca; /* Anything you want */
+  color: #2D37D5; /* Anything you want */
 }
+
 
 /* Background */
 
@@ -60,8 +67,7 @@ body {
 /* Typography */ 
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
-
-  font-family: 'Archivo', sans-serif; 
+  font-family: 'Work Sans', sans-serif; 
   color: white;
   letter-spacing: 0.03em;
 }
@@ -97,7 +103,7 @@ h6, .h6 {
 
 p {
   color: white;
-  font-family: "Heebo", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 
@@ -178,7 +184,7 @@ p {
     }
   }
   
-  /* Gallery */
+  /* Gallery 
 
   .gallery { 
     -webkit-column-count: 3;
@@ -197,21 +203,21 @@ p {
     transition: 50ms;
     margin-bottom: 10px;
     opacity: 1;
-    page-break-inside: avoid; /* For Firefox. */
-    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
-    break-inside: avoid; /* For standard browsers like IE. :-) */
-}
+    page-break-inside: avoid; /* For Firefox. 
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. 
+    break-inside: avoid; /* For standard browsers like IE. :-) 
+} 
 
 .gallery img:hover {
     opacity: 0.7;
-}
+} 
 
 /* .modal {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: center;
-} */
+} 
 
 .modal-img,.model-vid{
   margin: 0;
@@ -262,16 +268,3 @@ p {
         width: 200px;
     }
 }
-
-/* Loading */
-  
-.wrapper {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .loader {
-    margin: auto;
-    font-size: 50px;
-  }
